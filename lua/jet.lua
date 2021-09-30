@@ -1,7 +1,6 @@
 local M = {}
 
 local current_folder = debug.getinfo(1, "S").source:sub(2):match("(.*[/\\])"):sub(1, -2):match("(.*[/\\])")
-P(current_folder)
 
 function M.setup(opts)
   opts = opts or {}
