@@ -7,14 +7,14 @@
 With Packer:
 
 ```lua
-    use({
-      "~/gitrepos/JET.nvim",
-      requires = "jose-elias-alvarez/null-ls.nvim",
-      ft = { "julia" },
-      config = function()
-        require("jet").setup()
-      end,
-    })
+use({
+  "~/gitrepos/JET.nvim",
+  requires = "jose-elias-alvarez/null-ls.nvim",
+  ft = { "julia" },
+  config = function()
+    require("jet").setup()
+  end,
+})
 ```
 
 ## Configuration
