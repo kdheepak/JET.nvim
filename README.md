@@ -4,7 +4,9 @@
 
 ## Install
 
-With Packer:
+**With [Packer](https://github.com/wbthomason/packer.nvim):**
+
+Add the following to `init.lua`:
 
 ```lua
 use({
@@ -17,10 +19,24 @@ use({
 })
 ```
 
+**With [vim-plug](https://github.com/junegunn/vim-plug):**
+
+Add the following to `init.vim` or `.vimrc`:
+
+```vimrc
+Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'kdheepak/JuliaFormatter.vim'
+
+lua << EOF
+  require("jet").setup()
+EOF
+```
+
 ## Configuration
 
 ```lua
 require("jet").setup({
-  timeout = 15000,
+  timeout = 15000, -- timeout for JET.jl
+  setup_lspconfig = true, -- configure lspconfig
 })
 ```

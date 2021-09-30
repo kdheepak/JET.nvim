@@ -5,6 +5,7 @@ local current_folder = debug.getinfo(1, "S").source:sub(2):match("(.*[/\\])"):su
 function M.setup(opts)
   opts = opts or {}
   timeout = opts.timeout or 15000
+  setup_lspconfig = opts.setup_lspconfig or true
   local null_ls = require("null-ls")
   local helpers = require("null-ls.helpers")
   local builtins = null_ls.builtins
@@ -39,6 +40,13 @@ function M.setup(opts)
   }
 
   null_ls.register(jet_julia)
+  null_ls.config({
+    sources = { jet_julia },
+  })
+
+  if setup_lspconfig then
+    require("lspconfig")["null-ls"].setup({})
+  end
 end
 
 return M
