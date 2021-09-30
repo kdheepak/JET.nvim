@@ -1,8 +1,11 @@
 #!/usr/bin/env julia --project=~/.julia/environments/nvim-null-ls
 
+# **Usage**
+# jet filename.jl
+
 using JET
 
-filename = ARGS[1]
+filename = only(ARGS)
 
 function print_reports(io, result)
 
@@ -33,7 +36,8 @@ end
 
 function print_error_report(io, report::JET.InferenceErrorReport)
     frame = report.vst[1]
-    printstyled(io, string(frame.line), ": ")
+    printstyled(io, string(frame.line), ":")
+    printstyled(io, "E", ": ")
     printstyled(io, report.msg, ": "; color = JET.ERROR_COLOR)
     JET.print_signature(io, report.sig,
                     (; annotate_types = true); # always annotate types for errored signatures
@@ -45,5 +49,5 @@ function print_error_report(io, report)
     printstyled(io, report.msg, "\n"; color = JET.ERROR_COLOR)
 end
 
-r = report_file(filename)
+r = report_file(filename, analyze_from_definitions = true, target_defined_modules = true)
 print_reports(stderr, r)

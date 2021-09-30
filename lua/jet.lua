@@ -29,8 +29,15 @@ function M.setup(opts)
       end,
       on_output = helpers.diagnostics.from_patterns({
         {
-          pattern = [[(%d+):(.*)]],
-          groups = { "row", "message" },
+          pattern = [[(%d+):(([EIW])%w+):(.*)]],
+          groups = { "row", "severity", "message" },
+          overrides = {
+            severities = {
+              E = h.diagnostics.severities["error"],
+              W = h.diagnostics.severities["warning"],
+              I = h.diagnostics.severities["information"],
+            },
+          },
         },
       }),
     }),
