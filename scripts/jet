@@ -1,7 +1,7 @@
 #!/usr/bin/env julia --project=~/.julia/environments/nvim-null-ls
 
 # **Usage**
-# jet filename.jl
+# $ jet filename.jl
 
 using JET
 
