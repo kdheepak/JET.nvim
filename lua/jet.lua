@@ -19,7 +19,6 @@ function M.setup(opts)
       to_stdin = true,
       from_stderr = true,
       timeout = timeout,
-      -- choose an output format (raw, json, or line)
       format = "line",
       check_exit_code = function(code)
         return code <= 1
@@ -28,8 +27,6 @@ function M.setup(opts)
         local filename = params.bufname
         return { filename }
       end,
-      -- use helpers to parse the output from string matchers,
-      -- or parse it manually with a function
       on_output = helpers.diagnostics.from_patterns({
         {
           pattern = [[(%d+):(.*)]],
