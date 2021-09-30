@@ -28,7 +28,7 @@ function M.setup(opts)
       args = { "$FILENAME" },
       on_output = helpers.diagnostics.from_patterns({
         {
-          pattern = [[(%d+):(([EIW])%w+):(.*)]],
+          pattern = [[(%d+):([EIW]):(.*)]],
           groups = { "row", "severity", "message" },
           overrides = {
             severities = {
