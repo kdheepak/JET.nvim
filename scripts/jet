@@ -1,4 +1,4 @@
-#!/usr/bin/env julia --project=~/.julia/environments/nvim-null-ls
+#!/usr/bin/env julia --startup-file=no --project=~/.julia/environments/nvim-null-ls
 
 # **Usage**
 # $ jet filename.jl
