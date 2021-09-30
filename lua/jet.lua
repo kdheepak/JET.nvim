@@ -6,7 +6,7 @@ local command = root_folder .. "scripts/jet"
 
 function M.setup(opts)
   opts = opts or {}
-  timeout = opts.timeout or 15000
+  timeout = opts.timeout or 20000
   setup_lspconfig = opts.setup_lspconfig or true
   local null_ls = require("null-ls")
   local helpers = require("null-ls.helpers")

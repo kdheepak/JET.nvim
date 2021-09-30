@@ -49,8 +49,14 @@ function print_error_report(io, report)
     printstyled(io, report.msg, "\n"; color = JET.ERROR_COLOR)
 end
 
-r = report_file(filename, analyze_from_definitions = true)
-print_reports(stderr, r)
+while true
+    while !eof(stdin)
+        line = readline(stdin)
+    end
+    r = report_file(filename, analyze_from_definitions = true)
+    print_reports(stderr, r)
+    sleep(5)
+end
 
 # f = open("test.log", "w")
 # write(f, filename * "\n")
