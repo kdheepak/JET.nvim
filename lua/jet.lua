@@ -25,10 +25,7 @@ function M.setup(opts)
       check_exit_code = function(code)
         return code <= 1
       end,
-      args = function(params)
-        local filename = params.bufname
-        return { filename }
-      end,
+      args = { "$FILENAME" },
       on_output = helpers.diagnostics.from_patterns({
         {
           pattern = [[(%d+):(([EIW])%w+):(.*)]],

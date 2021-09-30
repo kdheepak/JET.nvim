@@ -51,3 +51,9 @@ end
 
 r = report_file(filename, analyze_from_definitions = true, target_defined_modules = true)
 print_reports(stderr, r)
+
+# f = open("test.log", "w")
+# write(f, filename * "\n")
+
+# write(f, "finished. \n")
+# close(f)
