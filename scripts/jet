@@ -49,7 +49,7 @@ function print_error_report(io, report)
     printstyled(io, report.msg, "\n"; color = JET.ERROR_COLOR)
 end
 
-r = report_file(filename, analyze_from_definitions = true, target_defined_modules = true)
+r = report_file(filename, analyze_from_definitions = true)
 print_reports(stderr, r)
 
 # f = open("test.log", "w")
