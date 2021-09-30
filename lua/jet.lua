@@ -2,6 +2,8 @@ local M = {}
 
 local root_folder = debug.getinfo(1, "S").source:sub(2):match("(.*[/\\])"):sub(1, -2):match("(.*[/\\])")
 
+local command = root_folder .. "scripts/jet"
+
 function M.setup(opts)
   opts = opts or {}
   timeout = opts.timeout or 15000
@@ -15,7 +17,7 @@ function M.setup(opts)
     method = null_ls.methods.DIAGNOSTICS,
     filetypes = { "julia" },
     generator = null_ls.generator({
-      command = root_folder .. "/scripts/jet",
+      command = command,
       to_stdin = true,
       from_stderr = true,
       timeout = timeout,
