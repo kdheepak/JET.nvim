@@ -12,6 +12,7 @@ Add the following to `init.lua`:
 use({
   "~/gitrepos/JET.nvim",
   requires = "jose-elias-alvarez/null-ls.nvim",
+  run = [[mkdir -p ~/.julia/environments/nvim-null-ls && julia --startup-file=no --project=~/.julia/environments/nvim-null-ls -e 'using Pkg; Pkg.add("JET")']],
   ft = { "julia" },
   config = function()
     require("jet").setup()
@@ -20,6 +21,11 @@ use({
 ```
 
 **With [vim-plug](https://github.com/junegunn/vim-plug):**
+
+```bash
+$ mkdir -p ~/.julia/environments/nvim-null-ls
+$ julia --startup-file=no --project=~/.julia/environments/nvim-null-ls -e 'using Pkg; Pkg.add("JET")'
+```
 
 Add the following to `init.vim` or `.vimrc`:
 
