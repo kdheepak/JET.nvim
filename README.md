@@ -29,7 +29,7 @@ $ julia --startup-file=no --project=~/.julia/environments/nvim-null-ls -e 'using
 
 Add the following to `init.vim` or `.vimrc`:
 
-```vimrc
+```vim
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'kdheepak/JuliaFormatter.vim'
 
