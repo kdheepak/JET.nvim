@@ -22,12 +22,13 @@ use({
 
 **With [vim-plug](https://github.com/junegunn/vim-plug):**
 
+Run the following in a terminal:
+
 ```bash
-$ mkdir -p ~/.julia/environments/nvim-null-ls
-$ julia --startup-file=no --project=~/.julia/environments/nvim-null-ls -e 'using Pkg; Pkg.add("JET")'
+$ mkdir -p ~/.julia/environments/nvim-null-ls && julia --startup-file=no --project=~/.julia/environments/nvim-null-ls -e 'using Pkg; Pkg.add("JET")'
 ```
 
-Add the following to `init.vim` or `.vimrc`:
+Then add the following to your `init.vim` or `.vimrc`:
 
 ```vim
 Plug 'jose-elias-alvarez/null-ls.nvim'
