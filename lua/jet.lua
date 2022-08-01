@@ -43,9 +43,9 @@ function M.setup(opts)
   }
 
   null_ls.register(jet_julia)
-  null_ls.config({
-    sources = { jet_julia },
-  })
+  -- null_ls.config({
+  --   sources = { jet_julia },
+  -- })
 
   if setup_lspconfig then
     require("lspconfig")["null-ls"].setup({})
