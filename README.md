@@ -1,6 +1,5 @@
 # JET.nvim
 
-![](https://github.com/kdheepak/JET.nvim/assets/1813121/de113f50-6167-495f-8b33-ac2e1bd4bc1e)
 ![](https://github.com/kdheepak/JET.nvim/assets/1813121/87b969d6-c2ab-44d7-bc4b-529ede3eab42)
 
 ## Install
