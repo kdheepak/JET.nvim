@@ -1,6 +1,7 @@
 # JET.nvim
 
-![](https://aws1.discourse-cdn.com/business5/uploads/julialang/original/3X/b/4/b47f035733d3f3fab9dd9c13f0e5446e60f59d3c.jpeg)
+![](https://github.com/kdheepak/JET.nvim/assets/1813121/de113f50-6167-495f-8b33-ac2e1bd4bc1e)
+![](https://github.com/kdheepak/JET.nvim/assets/1813121/87b969d6-c2ab-44d7-bc4b-529ede3eab42)
 
 ## Install
 
